@@ -1,0 +1,110 @@
+/* Estilos generales */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 25px;
+}
+
+/* Estilo de la tabla */
+table {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Encabezado de la tabla */
+thead th {
+  background-color: #3498db;
+  color: white;
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: bold;
+}
+
+/* Cuerpo de la tabla */
+tbody td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9fbfd;
+}
+
+/* Pie de la tabla */
+tfoot td {
+  padding: 12px 15px;
+  text-align: center;
+  font-weight: bold;
+  background-color: #ecf0f1;
+  color: #2c3e50;
+}
+
+/* Responsive: ajuste en pantallas pequeñas */
+@media (max-width: 600px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: white;
+  }
+
+  td {
+    border: none;
+    position: relative;
+    padding-left: 50% !important;
+    text-align: right;
+  }
+
+  td::before {
+    content: attr(data-label) ": ";
+    position: absolute;
+    left: 10px;
+    width: 45%;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  tfoot tr {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    margin-top: 15px;
+    background: #ecf0f1;
+    border-radius: 6px;
+  }
+
+  tfoot td {
+    display: block;
+    padding: 10px !important;
+    text-align: center;
+  }
+}
